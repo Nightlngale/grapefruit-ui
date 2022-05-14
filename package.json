@@ -1,6 +1,7 @@
 {
   "name": "grapefruit-ui",
-  "version": "0.1.0",
+  "description": "simple, lightweight, and configurable library with layout components",
+  "version": "0.1.4",
   "private": true,
   "author": "Yevhenii Moroziuk <kemd99@gmail.com>",
   "main": "dist/cjs/index.js",
