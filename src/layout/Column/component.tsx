@@ -8,7 +8,7 @@ import type { ColumnProps } from './types';
 import styles from './column.module.scss';
 
 export const Column = (props: ColumnProps) => {
-  const [{ children, dataTestId, ...rest }, sizingProps] = splitObjectPropsByArray<
+  const [sizingProps, { children, dataTestId, ...rest }] = splitObjectPropsByArray<
     ColumnProps,
     SizesProps
   >(props, breakpointsSizes);
