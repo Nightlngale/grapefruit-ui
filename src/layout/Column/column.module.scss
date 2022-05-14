@@ -1,0 +1,45 @@
+@import '../../styles/breakpoints';
+
+@function column-size($column-count) {
+  @return 0 0 calc(100% / var(--grid-columns) * $column-count);
+}
+
+.column {
+  flex: 1;
+
+  &.col-xs {
+    @media (max-width: $breakpoint-sm) {
+      flex: column-size(var(--col-xs));
+    }
+  }
+
+  &.col-sm {
+    @media (min-width: $breakpoint-sm) {
+      flex: column-size(var(--col-sm));
+    }
+  }
+
+  &.col-md {
+    @media (min-width: $breakpoint-md) {
+      flex: column-size(var(--col-md));
+    }
+  }
+
+  &.col-lg {
+    @media (min-width: $breakpoint-lg) {
+      flex: column-size(var(--col-lg));
+    }
+  }
+
+  &.col-xl {
+    @media (min-width: $breakpoint-lg) {
+      flex: column-size(var(--col-xl));
+    }
+  }
+
+  &.col-xxl {
+    @media (min-width: $breakpoint-xl) {
+      flex: column-size(var(--col-xxl));
+    }
+  }
+}
