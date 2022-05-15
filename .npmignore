@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+jest.config.js
+
+# files
+/src
+rollup.config.js
+tsconfig.json
