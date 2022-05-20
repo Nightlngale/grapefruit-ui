@@ -37,7 +37,11 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
         sourceMap: !isProd,
-        minimize: isProd
+        minimize: isProd,
+        modules: {
+          generateScopedName: "Grapefruit-UI__[local]",
+        },
+        autoModules: false
       }),
       isProd ? terser({
         compress: {

@@ -32,13 +32,13 @@
   }
 
   &.col-xl {
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-xl) {
       flex: column-size(var(--col-xl));
     }
   }
 
   &.col-xxl {
-    @media (min-width: $breakpoint-xl) {
+    @media (min-width: $breakpoint-xxl) {
       flex: column-size(var(--col-xxl));
     }
   }

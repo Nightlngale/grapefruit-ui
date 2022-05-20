@@ -5,7 +5,10 @@
 /coverage
 jest.config.js
 
-# files
+# source
 /src
+
+# tools
+.editorconfig
 rollup.config.js
 tsconfig.json
