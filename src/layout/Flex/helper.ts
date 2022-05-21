@@ -6,6 +6,8 @@ export const flexProps: FlexStylePropsKeys[] = [
   'direction',
   'wrap',
   'justify',
+  'justifySelf',
+  'justifyItems',
   'align',
   'alignSelf',
   'alignContent',

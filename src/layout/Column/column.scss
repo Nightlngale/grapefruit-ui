@@ -7,37 +7,37 @@
 .column {
   flex: 1;
 
-  &.col-xs {
+  &-xs {
     @media (max-width: $breakpoint-sm) {
       flex: column-size(var(--col-xs));
     }
   }
 
-  &.col-sm {
+  &-sm {
     @media (min-width: $breakpoint-sm) {
       flex: column-size(var(--col-sm));
     }
   }
 
-  &.col-md {
+  &-md {
     @media (min-width: $breakpoint-md) {
       flex: column-size(var(--col-md));
     }
   }
 
-  &.col-lg {
+  &-lg {
     @media (min-width: $breakpoint-lg) {
       flex: column-size(var(--col-lg));
     }
   }
 
-  &.col-xl {
+  &-xl {
     @media (min-width: $breakpoint-xl) {
       flex: column-size(var(--col-xl));
     }
   }
 
-  &.col-xxl {
+  &-xxl {
     @media (min-width: $breakpoint-xxl) {
       flex: column-size(var(--col-xxl));
     }

@@ -1,16 +1,16 @@
-import { SizesProps } from '../types';
+import type { SizesProps } from '../types';
 
 export const mapStylesAttributes = (args: SizesProps) => {
-  const classes: string[] = [];
+  const selectors: string[] = [];
   const variables: Record<string, number> = {};
 
   Object.entries(args).forEach(([key, value]) => {
     variables[`--col-${key}`] = value;
-    classes.push(`col-${key}`);
+    selectors.push(`column-${key}`);
   });
 
   return {
-    classes,
+    selectors,
     variables
   };
 };

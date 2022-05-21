@@ -1,3 +1,5 @@
 import { LayoutBaseComponentProps } from '../types';
 
-export type ContainerProps = LayoutBaseComponentProps;
+export interface ContainerProps extends LayoutBaseComponentProps {
+  fullwidth?: boolean;
+};

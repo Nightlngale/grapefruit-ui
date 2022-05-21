@@ -39,9 +39,9 @@ export default [
         sourceMap: !isProd,
         minimize: isProd,
         modules: {
-          generateScopedName: "Grapefruit-UI__[local]",
+          generateScopedName: "Grapefruit-UI__[local]"
         },
-        autoModules: false
+        autoModules: false,
       }),
       isProd ? terser({
         compress: {

@@ -1,5 +1,5 @@
 import { Flex } from '../Flex';
-import { RowProps } from './types';
+import type { RowProps } from './types';
 
 export const Row = (props: RowProps) => {
   const { dataTestId, wrap = 'wrap', orientation, children } = props;
