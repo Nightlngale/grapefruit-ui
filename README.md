@@ -21,7 +21,7 @@ First, you need to import styles to use the default grid (base 12 columns) and s
 import 'grapefruit-ui/dist/styles.css';
 ```
 
-Otherwise, please add such css variables
+Otherwise, please add css variables, eg:
 
 ```css
 :root {
@@ -63,7 +63,7 @@ export default App;
 
 ## API
 
-All components are nothing but a wrap over div element, so they accept all it's props.
+All components are nothing but a wrap over div element, so they accept all its props.
 
 ### Flex
 
@@ -82,7 +82,7 @@ All components are nothing but a wrap over div element, so they accept all it's 
 | grow            | CSSProperties.FlexGrow       | -                 |
 | shrink          | CSSProperties.FlexShrink     | -                 |
 | basis           | CSSProperties.FlexBasis      | -                 |
-| flex            | CSSProperties.Flex           |
+| flex            | CSSProperties.Flex           | -                 |
 
 ### Row
 
