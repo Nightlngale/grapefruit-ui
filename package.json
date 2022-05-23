@@ -1,7 +1,7 @@
 {
   "name": "grapefruit-ui",
   "description": "simple, lightweight, and configurable library with layout components",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": false,
   "author": "Yevhenii Moroziuk <kemd99@gmail.com>",
   "license": "MIT",
