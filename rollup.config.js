@@ -30,7 +30,6 @@ export default [
     ],
     plugins: [
       filesize(),
-      del({ targets: 'dist/*' }),
       peerDepsExternal(),
       resolve(),
       commonjs(),
@@ -64,6 +63,9 @@ export default [
   {
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts()]
+    plugins: [
+      dts(),
+      del({ targets: ['dist/cjs/types', 'dist/esm/types'], hook: "buildEnd" })
+    ]
   },
 ];

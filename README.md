@@ -1,7 +1,9 @@
 # Grapefruit-ui
 [![Version](https://img.shields.io/npm/v/grapefruit-ui.svg)](https://www.npmjs.com/package/grapefruit-ui)
-[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/Nightlngale/grapefruit-ui#readme)
+![npm](https://img.shields.io/npm/dt/grapefruit-ui)
+![size](https://img.shields.io/bundlephobia/minzip/grapefruit-ui?label=gzipped)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
+
 
 > simple, lightweight, and configurable library with layout components
 
@@ -74,7 +76,7 @@ All components are nothing but a wrap over div element, so they accept all its p
 
 | Property        | Type                         | Default value     |
 | --------------- | ---------------------------- | ----------------- |
-| display         | `flex' | 'inline-flex'`      | `flex`            |
+| display         | `flex | inline-flex`         | `flex`            |
 | direction       | CSSProperties.FlexDirection  | -                 |
 | wrap            | CSSProperties.FlexWrap       | -                 |
 | justify         | CSSProperties.JustifyContent | -                 |
