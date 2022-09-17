@@ -3,7 +3,7 @@
 ![npm](https://img.shields.io/npm/dt/grapefruit-ui)
 ![size](https://img.shields.io/bundlephobia/minzip/grapefruit-ui?label=gzipped)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
-
+[![CI](https://github.com/Nightlngale/grapefruit-ui/actions/workflows/ci.yml/badge.svg)](#)
 
 > simple, lightweight, and configurable library with layout components
 
