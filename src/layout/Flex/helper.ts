@@ -15,7 +15,7 @@ export const flexProps: FlexStylePropsKeys[] = [
   'grow',
   'shrink',
   'basis',
-  'flex'
+  'flex',
 ];
 
 export const mapFlexPropsToStyles = ({
@@ -37,5 +37,5 @@ export const mapFlexPropsToStyles = ({
   flexGrow: grow,
   flexShrink: shrink,
   flexBasis: basis,
-  ...rest
+  ...rest,
 });

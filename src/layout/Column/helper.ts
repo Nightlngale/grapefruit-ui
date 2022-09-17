@@ -11,6 +11,6 @@ export const mapStylesAttributes = (args: SizesProps) => {
 
   return {
     selectors,
-    variables
+    variables,
   };
 };

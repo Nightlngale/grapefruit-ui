@@ -1,0 +1,31 @@
+name: Lint and build
+
+on:
+  pull_request:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Check code quality
+        run: |
+          npm run code-quality:check
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
