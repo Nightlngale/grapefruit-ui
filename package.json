@@ -26,7 +26,10 @@
     "build": "rollup -c",
     "build:minify": "cross-env NODE_ENV=production rollup -c",
     "test": "jest --no-cache",
-    "test:cov": "jest --no-cache --coverage"
+    "test:cov": "jest --no-cache --coverage",
+    "prettier:check": "prettier --check \"*/**/*.{ts,tsx}\" --loglevel=warn",
+    "lint:check": "eslint . --ext .ts,.tsx",
+    "check-code-quality": "npm run prettier:check && npm run lint:check"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",

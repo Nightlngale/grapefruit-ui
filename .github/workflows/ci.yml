@@ -18,15 +18,14 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm run install:all
+        run: npm i
 
-      - name: Check code quality
-        run: |
-          npm run prettier:check:all
-          npm run lint:all
+      # - name: Check code quality
+      #   run: |
+      #     npm run check-code-quality
 
       - name: Test
         run: npm run test
 
       - name: Build
-        run: npm run build:all
+        run: npm run build
