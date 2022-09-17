@@ -10,11 +10,11 @@ export const Container = (props: ContainerProps) => {
     <div
       data-test-id={dataTestId}
       className={classNames(className, classes['container'], {
-        [classes['container-fullwidth']]: fullwidth
+        [classes['container-fullwidth']]: fullwidth,
       })}
       {...rest}
     >
       {children}
     </div>
   );
-}
+};

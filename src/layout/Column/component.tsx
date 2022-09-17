@@ -8,20 +8,23 @@ import type { ColumnProps } from './types';
 import classes from './column.scss';
 
 export const Column = (props: ColumnProps) => {
-  const [sizingProps, { children, dataTestId, style,  className, ...rest }] = splitObjectPropsByArray<
-    ColumnProps,
-    SizesProps
-  >(props, breakpointsSizes);
+  const [sizingProps, { children, dataTestId, style, className, ...rest }] =
+    splitObjectPropsByArray<ColumnProps, SizesProps>(props, breakpointsSizes);
 
   const { selectors, variables } = mapStylesAttributes(sizingProps);
   const classname = classNames(
     classes['column'],
     selectors.map((it) => classes[it]),
-    className
+    className,
   );
 
   return (
-    <div data-test-id={dataTestId} className={classname} style={{ ...style, ...variables }} {...rest}>
+    <div
+      data-test-id={dataTestId}
+      className={classname}
+      style={{ ...style, ...variables }}
+      {...rest}
+    >
       {children}
     </div>
   );

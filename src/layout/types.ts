@@ -1,12 +1,15 @@
 import type { HTMLAttributes, ReactNode } from 'react';
-import type { Breakpoints } from './breakpoints';
+import type { Breakpoint } from './breakpoints';
 
-export type SizesProps = Partial<Record<Breakpoints, number>>;
+export type SizesProps = Partial<Record<Breakpoint, number>>;
 
 export interface BaseComponent {
   dataTestId?: string;
 }
 
-export interface LayoutBaseComponentProps extends HTMLAttributes<HTMLDivElement>, BaseComponent {
+export interface LayoutBaseComponentProps
+  extends React.HTMLProps<HTMLDivElement>,
+    HTMLAttributes<HTMLDivElement>,
+    BaseComponent {
   children?: ReactNode;
 }

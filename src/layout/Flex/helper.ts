@@ -1,5 +1,5 @@
-import { CSSProperties } from 'react';
-import { FlexStyleProps, FlexStylePropsKeys } from './types';
+import type { CSSProperties } from 'react';
+import type { FlexStyleProps, FlexStylePropsKeys } from './types';
 
 export const flexProps: FlexStylePropsKeys[] = [
   'display',

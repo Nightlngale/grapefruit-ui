@@ -1,30 +1,30 @@
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
-import del from 'rollup-plugin-delete'
+import del from 'rollup-plugin-delete';
 import filesize from 'rollup-plugin-filesize';
 import { terser } from 'rollup-plugin-terser';
-import copy from 'rollup-plugin-copy'
-
-const packageJson = require("./package.json");
+import copy from 'rollup-plugin-copy';
+import generatePackageJson from 'rollup-plugin-generate-package-json';
+import packageJson from './package.json';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 export default [
   {
-    input: "src/index.ts",
+    input: 'src/index.ts',
     output: [
       {
         file: packageJson.main,
-        format: "cjs",
+        format: 'cjs',
         sourcemap: !isProd
       },
       {
         file: packageJson.module,
-        format: "esm",
+        format: 'esm',
         sourcemap: !isProd
       }
     ],
@@ -33,14 +33,21 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({ tsconfig: './tsconfig.json' }),
       postcss({
         sourceMap: !isProd,
         minimize: isProd,
         modules: {
-          generateScopedName: "Grapefruit-UI__[local]"
+          generateScopedName: 'GRF__[local]'
         },
         autoModules: false,
+      }),
+      generatePackageJson({
+        outputFolder: 'dist',
+        baseContents: {
+          ...packageJson,
+          scripts: undefined,
+        },
       }),
       isProd ? terser({
         compress: {
@@ -61,11 +68,11 @@ export default [
     ]
   },
   {
-    input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    input: 'dist/esm/types/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [
       dts(),
-      del({ targets: ['dist/cjs/types', 'dist/esm/types'], hook: "buildEnd" })
+      del({ targets: ['dist/cjs/types', 'dist/esm/types'], hook: 'buildEnd' })
     ]
   },
 ];

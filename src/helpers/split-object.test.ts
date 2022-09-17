@@ -1,4 +1,4 @@
-import { splitObjectPropsByArray } from "./split-object";
+import { splitObjectPropsByArray } from './split-object';
 
 describe('split-object', () => {
   it('Should split object into 2', () => {
@@ -20,5 +20,5 @@ describe('split-object', () => {
     expect(expected1.a).toBe(actual1.a);
     expect(expected1.b).toBe(actual1.b);
     expect(expected2.c).toBe(actual2.c);
-  })
+  });
 });
