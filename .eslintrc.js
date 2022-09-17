@@ -40,4 +40,5 @@ module.exports = {
       },
     ],
   },
+  'ignorePatterns': ['example/', 'dist/', 'node_modules/'],
 };
